@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: url('C:\Open This\romantic_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Tangerine';
+            text-align: center;
+            color: black; /* Change to a color that contrasts well with your background */
+        }
+
+        #valentine-question {
+            font-size: 40px;
+            margin-top: 150px;
+            font-weight: bold;
+        }
+
+        #options {
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #ffc0cb; /* Sand Pink color */
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #yes, #forever {
+            background-color: #ffc0cb; /* Sand Pink color */
+        }
+
+        #confirmation-message {
+            display: none;
+            font-size: 30px;
+            background-color: #ffc0cb; /* Sand Pink color */
+            padding: 20px;
+            margin-top: 20px;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+    <title>Valentine's Day</title>
+</head>
+
+<body>
+
+    <div id="valentine-question">
+        <p>Will You Be My Valentine?</p>
+    </div>
+
+    <div id="options">
+        <button id="yes" class="btn" onclick="showConfirmation()">Do You Even Have To Ask?</button>
+        <button id="forever" class="btn" onclick="showConfirmation()">I Am Your Forever Valentine</button>
+    </div>
+
+    <div id="confirmation-message">
+        <p>Now that you've agreed to be my valentine, would you be up for a virtual date on 14th Feb at your convenience? If yes, could you please send a voice note suggesting the time that suits you best?</p>
+        <p>I love you, babe. Have a great day at the office.</p>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            document.getElementById("confirmation-message").style.display = "block";
+        }
+
+        // JavaScript for smooth pop-up of option buttons
+        setTimeout(function () {
+            document.querySelectorAll(".btn").forEach(function (button) {
+                button.style.display = "inline-block";
+            });
+        }, 2000); // Display options after 2 seconds
+    </script>
+
+</body>
+
+</html>
